@@ -1,0 +1,31 @@
+#include <iostream>
+#include <time.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(int argc, char** argv) {
+	//int matriz1;
+	int tam1;
+	int mat[tam1][tam1];
+	int i, j;
+	//int numeroAleatorio[];
+
+	printf("Suma de matrices \n");
+	printf("De que tamaño quiere su primera matriz? Max20 \n");
+	scanf("%d",&tam1);
+
+	srand (time(NULL));
+	   for (int i=0;i<tam1;i++)//para desplazarse por las columnas
+    {
+        for (int j=0;j<tam1;j++)//para desplazarse por las filas
+        {
+            mat[i][j]=rand()%tam1;
+            printf("\t%d",mat[i][j]);
+ 		}
+ 		 printf("\n\n");
+	}
+    
+  
+	return 0;
+}
